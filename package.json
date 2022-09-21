@@ -1,0 +1,26 @@
+{
+  "name": "typescript-composite-lerna",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap --ignore-scripts && yarn resolve",
+    "update:tsconfig.json": "ts-node scripts/update-package-tsconfig.ts",
+    "update:package.json": "ts-node scripts/update-package-json.ts",
+    "resolve": "yarn update:tsconfig.json && yarn update:package.json",
+    "run:botfather": "node ./apps/botfather/",
+    "run:cli": "node ./apps/cli/"
+  },
+  "dependencies": {
+    "yargs": "^17.5.1"
+  },
+  "devDependencies": {
+    "@types/yargs": "^17.0.12",
+    "lerna": "3.16.4",
+    "ts-node": "8.3.0",
+    "typescript": "4.6.4"
+  }
+}

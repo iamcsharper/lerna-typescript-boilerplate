@@ -1,0 +1,35 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "apps/botfather/tsconfig.package.tsbuildinfo": true
+    },
+    "hidefiles.configurationType": "local",
+    "hidefiles.globalConfig": {
+        "profiles": [
+            {
+                "name": "Default",
+                "detail": "",
+                "description": "Test",
+                "hidden": [
+                    "apps/botfather/tsconfig.package.tsbuildinfo"
+                ],
+                "peek": [
+                    ".vscode/",
+                    "apps/"
+                ]
+            },
+            {
+                "name": "Strict",
+                "detail": "Hide everything not immediately required",
+                "hidden": [
+                    "$Default"
+                ]
+            }
+        ]
+    },
+    "hidefiles.selectedProfile": "Default"
+}

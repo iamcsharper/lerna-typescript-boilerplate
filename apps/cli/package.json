@@ -1,0 +1,22 @@
+{
+  "name": "cli",
+  "version": "0.1.0",
+  "dependencies": {},
+  "devDependencies": {},
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -b ./tsconfig.package.json",
+    "prepublish": "yarn run build",
+    "run:cli": "node .",
+    "name": "run:cli",
+    "value": "node ."
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
